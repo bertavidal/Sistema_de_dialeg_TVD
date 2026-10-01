@@ -33,6 +33,58 @@
       "answer_key": "location"
     }
   ],
+  "questions_ex6": [
+    {
+      "question": "Do you want to buy (sale) or to rent?",
+      "type": "multichoice",
+      "prompt": "Enter your choice: ",
+      "answer_key": "type"
+    },
+    {
+      "question": "What is your budget for the house?",
+      "type": "numerical",
+      "prompt": "Enter your choice (1k - 999k euros): ",
+      "answer_key": "price",
+      "condition": {
+        "key": "type",
+        "value": "sale"
+      }
+    },
+    {
+      "question": "What is your household's monthly income?",
+      "type": "numerical",
+      "prompt": "Enter your monthly income (euros): ",
+      "answer_key": "income",
+      "condition": {
+        "key": "type",
+        "value": "rent"
+      }
+    },
+    {
+      "question": "From which floor would you like to live? (0 = ground floor)",
+      "type": "numerical",
+      "prompt": "Enter your choice (0 - 8): ",
+      "answer_key": "floor"
+    },
+    {
+      "question": "Do you want a terrace?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "terrace"
+    },
+    {
+      "question": "Do you want an elevator?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "elevator"
+    },
+    {
+      "question": "Do you want to use the house for business (commercial use)?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "commercial_use"
+    }
+  ],
   "houses": [
     {
       "id": 1,
@@ -358,6 +410,19 @@
 	  "commercial_use":"Yes",
 	  "terrace": "No",
       "location": "Barcelona"
-    }
+    },
+    {
+    "id": 26,
+    "type": "rent",
+    "bedrooms": "2",
+    "bathrooms": "1",
+    "price": "950",
+    "square_meters": "70",
+    "floor": "5",
+    "elevator": "Yes",
+    "commercial_use": "No",
+    "terrace": "Yes",
+    "location": "Barcelona"
+  }
   ]
 }
