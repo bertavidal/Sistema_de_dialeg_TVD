@@ -1,0 +1,536 @@
+{
+  "start_message": "Welcome to the House Buying Assistant!",
+  "end_message": "Thank you for using the House Buying Assistant. Goodbye!",
+  "questions": [
+    {
+      "question": "How many bedrooms do you need?",
+      "type": "numerical",
+      "prompt": "Enter your choice (1 - 5 bedrooms): ",
+      "answer_key": "bedrooms"
+    },
+    {
+      "question": "How many bathrooms do you need?",
+      "type": "numerical",
+      "prompt": "Enter your choice (1 - 3 bathrooms): ",
+      "answer_key": "bathrooms"
+    },
+    {
+      "question": "What is your budget for the house?",
+      "type": "numerical",
+      "prompt": "Enter your choice (1k - 999k euros):",
+      "answer_key": "price"
+    },
+    {
+      "question": "How many square meters do you need?",
+      "type": "numerical",
+      "prompt": "Enter your choice (30 - 200 meters)",
+      "answer_key": "square_meters"
+    },
+    {
+      "question": "Which city or neighborhood would you prefer?",
+      "type": "multichoice",
+      "prompt": "Enter your choice",
+      "answer_key": "location"
+    }
+  ],
+  "questions_ex6": [
+    {
+      "question": "Do you want to buy (sale) or to rent?",
+      "type": "multichoice",
+      "prompt": "Enter your choice: ",
+      "answer_key": "type"
+    },
+    {
+      "question": "What is your budget for the house?",
+      "type": "numerical",
+      "prompt": "Enter your choice (1k - 999k euros): ",
+      "answer_key": "price",
+      "condition": {
+        "key": "type",
+        "value": "sale"
+      }
+    },
+    {
+      "question": "What is your household's monthly income?",
+      "type": "numerical",
+      "prompt": "Enter your monthly income (euros): ",
+      "answer_key": "income",
+      "condition": {
+        "key": "type",
+        "value": "rent"
+      }
+    },
+    {
+      "question": "From which floor would you like to live? (0 = ground floor)",
+      "type": "numerical",
+      "prompt": "Enter your choice (0 - 8): ",
+      "answer_key": "floor"
+    },
+    {
+      "question": "Do you want a terrace?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "terrace"
+    },
+    {
+      "question": "Do you want an elevator?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "elevator"
+    },
+    {
+      "question": "Do you want to use the house for business (commercial use)?",
+      "type": "yesno",
+      "prompt": "Enter yes / no: ",
+      "answer_key": "commercial_use"
+    }
+  ],
+  "questions_ex7": [
+    {
+      "answer_key": "type",
+      "type": "multichoice",
+      "question": "Vols comprar o llogar?"
+    },
+    {
+      "answer_key": "location",
+      "type": "multichoice",
+      "question": "A quina zona t'agradaria viure? Pots dir-ne m\u00e9s d'una, o \u00abqualsevol menys...\u00bb."
+    },
+    {
+      "answer_key": "price",
+      "type": "money",
+      "question": "Quin \u00e9s el teu pressupost m\u00e0xim per a la compra?",
+      "condition": {
+        "key": "type",
+        "values": [
+          "sale",
+          "ANY"
+        ]
+      }
+    },
+    {
+      "answer_key": "income",
+      "type": "money",
+      "question": "Quins s\u00f3n els ingressos mensuals de la llar? Recomanem no dedicar m\u00e9s del 35% al lloguer.",
+      "condition": {
+        "key": "type",
+        "values": [
+          "rent",
+          "ANY"
+        ]
+      }
+    },
+    {
+      "answer_key": "bedrooms",
+      "type": "numerical",
+      "question": "Quantes habitacions necessites?"
+    },
+    {
+      "answer_key": "bathrooms",
+      "type": "numerical",
+      "question": "Quants banys necessites?"
+    },
+    {
+      "answer_key": "square_meters",
+      "type": "numerical",
+      "question": "Quants metres quadrats necessites, com a m\u00ednim?"
+    },
+    {
+      "answer_key": "floor",
+      "type": "numerical",
+      "question": "A partir de quina planta vols viure? (0 = planta baixa)"
+    },
+    {
+      "answer_key": "terrace",
+      "type": "yesno",
+      "question": "Vols que tingui terrassa?"
+    },
+    {
+      "answer_key": "elevator",
+      "type": "yesno",
+      "question": "Necessites ascensor?"
+    },
+    {
+      "answer_key": "commercial_use",
+      "type": "yesno",
+      "question": "El vols fer servir per a un negoci (\u00fas comercial)?"
+    }
+  ],
+  "messages_ex7": {
+    "start_message": "Hola! S\u00f3c l'assistent immobiliari. T'ajudar\u00e9 a trobar un pis de compra o de lloguer.",
+    "open_question": "Explica'm qu\u00e8 busques: compra o lloguer, zona, habitacions, pressupost, terrassa... Pots dir-ho tot d'una vegada o a poc a poc.",
+    "end_message": "Gr\u00e0cies per fer servir l'assistent immobiliari. Fins aviat!",
+    "help_message": "Pots parlar-me amb llenguatge natural, per exemple: \u00abvull llogar un pis a Barcelona o Esplugues amb 2 habitacions i terrassa\u00bb. En qualsevol moment pots: canviar una prefer\u00e8ncia (\u00abmillor 3 habitacions\u00bb), dir que una cosa t'\u00e9s igual (\u00abm'\u00e9s igual la planta\u00bb), dir \u00abensenya'm els pisos\u00bb, comen\u00e7ar una \u00abnova cerca\u00bb o \u00absortir\u00bb.",
+    "fallback_open": "No he trobat cap prefer\u00e8ncia concreta a la teva resposta. Anem pas a pas."
+  },
+  "valid_ranges_ex7": {
+    "bedrooms": [
+      1,
+      10
+    ],
+    "bathrooms": [
+      1,
+      6
+    ],
+    "square_meters": [
+      20,
+      1000
+    ],
+    "floor": [
+      0,
+      30
+    ],
+    "price": [
+      10000,
+      5000000
+    ],
+    "rent_max": [
+      100,
+      20000
+    ],
+    "income": [
+      300,
+      100000
+    ]
+  },
+  "houses": [
+    {
+      "id": 1,
+      "type": "rent",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "price": "1200",
+      "square_meters": "100",
+      "floor": "3",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 2,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "250k",
+      "square_meters": "120",
+      "floor": "0",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 3,
+      "type": "rent",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "price": "800",
+      "square_meters": "80",
+      "floor": "8",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 4,
+      "type": "sale",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "100k",
+      "square_meters": "50",
+      "floor": "1",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 5,
+      "type": "rent",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "650",
+      "square_meters": "55",
+      "floor": "2",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "No",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 6,
+      "type": "sale",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "price": "120k",
+      "square_meters": "80",
+      "floor": "4",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 7,
+      "type": "rent",
+      "bedrooms": "5",
+      "bathrooms": "2",
+      "price": "2000",
+      "square_meters": "150",
+      "floor": "2",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Santa Coloma de Gramenet"
+    },
+    {
+      "id": 8,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "400k",
+      "square_meters": "150",
+      "floor": "5",
+      "elevator": "Yes",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "Esplugues de Llobregat"
+    },
+    {
+      "id": 9,
+      "type": "rent",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "700",
+      "square_meters": "55",
+      "floor": "3",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Esplugues de Llobregat"
+    },
+    {
+      "id": 10,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "3",
+      "price": "262k",
+      "square_meters": "75",
+      "floor": "1",
+      "elevator": "Yes",
+      "commercial_use": "Yes",
+      "terrace": "No",
+      "location": "Esplugues de Llobregat"
+    },
+    {
+      "id": 11,
+      "type": "rent",
+      "bedrooms": "3",
+      "bathrooms": "1",
+      "price": "1100",
+      "square_meters": "60",
+      "floor": "2",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Esplugues de Llobregat"
+    },
+    {
+      "id": 12,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "350k",
+      "square_meters": "100",
+      "floor": "6",
+      "elevator": "Yes",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "Esplugues de Llobregat"
+    },
+    {
+      "id": 13,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "330k",
+      "square_meters": "150",
+      "floor": "2",
+      "elevator": "Yes",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "L'Hospitalet de Llobregat"
+    },
+    {
+      "id": 14,
+      "type": "rent",
+      "bedrooms": "3",
+      "bathrooms": "1",
+      "price": "1500",
+      "square_meters": "100",
+      "floor": "3",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "L'Hospitalet de Llobregat"
+    },
+    {
+      "id": 15,
+      "type": "sale",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "price": "190k",
+      "square_meters": "75",
+      "floor": "0",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "L'Hospitalet de Llobregat"
+    },
+    {
+      "id": 16,
+      "type": "sale",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "price": "176k",
+      "square_meters": "80",
+      "floor": "1",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "L'Hospitalet de Llobregat"
+    },
+    {
+      "id": 17,
+      "type": "rent",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "450",
+      "square_meters": "45",
+      "floor": "6",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Barcelona"
+    },
+    {
+      "id": 18,
+      "type": "rent",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "850",
+      "square_meters": "50",
+      "floor": "4",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    },
+    {
+      "id": 19,
+      "type": "rent",
+      "bedrooms": "3",
+      "bathrooms": "1",
+      "price": "600",
+      "square_meters": "75",
+      "floor": "1",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    },
+    {
+      "id": 20,
+      "type": "sale",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "price": "360k",
+      "square_meters": "90",
+      "floor": "2",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    },
+    {
+      "id": 21,
+      "type": "sale",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "480k",
+      "square_meters": "120",
+      "floor": "3",
+      "elevator": "Yes",
+      "commercial_use": "Yes",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    },
+    {
+      "id": 22,
+      "type": "rent",
+      "bedrooms": "4",
+      "bathrooms": "2",
+      "price": "3000",
+      "square_meters": "100",
+      "floor": "0",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "No",
+      "location": "Barcelona"
+    },
+    {
+      "id": 23,
+      "type": "sale",
+      "bedrooms": "3",
+      "bathrooms": "2",
+      "price": "285k",
+      "square_meters": "95",
+      "floor": "1",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "No",
+      "location": "Barcelona"
+    },
+    {
+      "id": 24,
+      "type": "sale",
+      "bedrooms": "1",
+      "bathrooms": "1",
+      "price": "200k",
+      "square_meters": "50",
+      "floor": "2",
+      "elevator": "No",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    },
+    {
+      "id": 25,
+      "type": "sale",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "price": "180k",
+      "square_meters": "60",
+      "floor": "3",
+      "elevator": "No",
+      "commercial_use": "Yes",
+      "terrace": "No",
+      "location": "Barcelona"
+    },
+    {
+      "id": 26,
+      "type": "rent",
+      "bedrooms": "2",
+      "bathrooms": "1",
+      "price": "950",
+      "square_meters": "70",
+      "floor": "5",
+      "elevator": "Yes",
+      "commercial_use": "No",
+      "terrace": "Yes",
+      "location": "Barcelona"
+    }
+  ]
+}
