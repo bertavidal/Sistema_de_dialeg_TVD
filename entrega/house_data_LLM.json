@@ -1,0 +1,45 @@
+{
+  "messages": {
+    "start_message": "Hola! Sóc l'assistent immobiliari. T'ajudaré a trobar un pis de compra o de lloguer.",
+    "open_question": "Explica'm què busques: compra o lloguer, zona, habitacions, pressupost, terrassa... Pots dir-ho tot d'una vegada o a poc a poc. (Escriu «adéu» o «sortir» per acabar.)",
+    "end_message": "Gràcies per fer servir l'assistent immobiliari. Fins aviat!",
+    "help_message": "Pots parlar-me amb llenguatge natural, per exemple: «vull llogar un pis a Barcelona o Esplugues amb 2 habitacions i terrassa». Pots afinar la cerca en qualsevol moment («millor 3 habitacions», «amb ascensor»). Per acabar, escriu «adéu» o «sortir»."
+  },
+  "valid_ranges": {
+    "bedrooms": [1, 10],
+    "bathrooms": [1, 6],
+    "square_meters": [20, 1000],
+    "floor": [0, 30],
+    "price": [10000, 5000000],
+    "rent_max": [100, 20000],
+    "income": [300, 100000]
+  },
+  "houses": [
+    {"id": 1, "type": "rent", "location": "Santa Coloma de Gramenet", "bedrooms": 3, "bathrooms": 2, "square_meters": 100, "floor": 3, "price": 1200, "elevator": "Yes", "terrace": "No", "commercial_use": "No"},
+    {"id": 2, "type": "sale", "location": "Santa Coloma de Gramenet", "bedrooms": 4, "bathrooms": 2, "square_meters": 120, "floor": 0, "price": 250000, "elevator": "No", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 3, "type": "rent", "location": "Santa Coloma de Gramenet", "bedrooms": 2, "bathrooms": 1, "square_meters": 80, "floor": 8, "price": 800, "elevator": "Yes", "terrace": "No", "commercial_use": "No"},
+    {"id": 4, "type": "sale", "location": "Santa Coloma de Gramenet", "bedrooms": 1, "bathrooms": 1, "square_meters": 50, "floor": 1, "price": 100000, "elevator": "No", "terrace": "No", "commercial_use": "No"},
+    {"id": 5, "type": "rent", "location": "Santa Coloma de Gramenet", "bedrooms": 1, "bathrooms": 1, "square_meters": 55, "floor": 2, "price": 650, "elevator": "No", "terrace": "No", "commercial_use": "Yes"},
+    {"id": 6, "type": "sale", "location": "Santa Coloma de Gramenet", "bedrooms": 2, "bathrooms": 1, "square_meters": 80, "floor": 4, "price": 120000, "elevator": "No", "terrace": "No", "commercial_use": "No"},
+    {"id": 7, "type": "rent", "location": "Santa Coloma de Gramenet", "bedrooms": 5, "bathrooms": 2, "square_meters": 150, "floor": 2, "price": 2000, "elevator": "Yes", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 8, "type": "sale", "location": "Esplugues de Llobregat", "bedrooms": 4, "bathrooms": 2, "square_meters": 150, "floor": 5, "price": 400000, "elevator": "Yes", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 9, "type": "rent", "location": "Esplugues de Llobregat", "bedrooms": 1, "bathrooms": 1, "square_meters": 55, "floor": 3, "price": 700, "elevator": "No", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 10, "type": "sale", "location": "Esplugues de Llobregat", "bedrooms": 4, "bathrooms": 3, "square_meters": 75, "floor": 1, "price": 262000, "elevator": "Yes", "terrace": "No", "commercial_use": "Yes"},
+    {"id": 11, "type": "rent", "location": "Esplugues de Llobregat", "bedrooms": 3, "bathrooms": 1, "square_meters": 60, "floor": 2, "price": 1100, "elevator": "No", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 12, "type": "sale", "location": "Esplugues de Llobregat", "bedrooms": 4, "bathrooms": 2, "square_meters": 100, "floor": 6, "price": 350000, "elevator": "Yes", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 13, "type": "sale", "location": "L'Hospitalet de Llobregat", "bedrooms": 4, "bathrooms": 2, "square_meters": 150, "floor": 2, "price": 330000, "elevator": "Yes", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 14, "type": "rent", "location": "L'Hospitalet de Llobregat", "bedrooms": 3, "bathrooms": 1, "square_meters": 100, "floor": 3, "price": 1500, "elevator": "No", "terrace": "No", "commercial_use": "No"},
+    {"id": 15, "type": "sale", "location": "L'Hospitalet de Llobregat", "bedrooms": 2, "bathrooms": 1, "square_meters": 75, "floor": 0, "price": 190000, "elevator": "No", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 16, "type": "sale", "location": "L'Hospitalet de Llobregat", "bedrooms": 3, "bathrooms": 2, "square_meters": 80, "floor": 1, "price": 176000, "elevator": "No", "terrace": "No", "commercial_use": "No"},
+    {"id": 17, "type": "rent", "location": "Barcelona", "bedrooms": 1, "bathrooms": 1, "square_meters": 45, "floor": 6, "price": 450, "elevator": "No", "terrace": "No", "commercial_use": "No"},
+    {"id": 18, "type": "rent", "location": "Barcelona", "bedrooms": 1, "bathrooms": 1, "square_meters": 50, "floor": 4, "price": 850, "elevator": "Yes", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 19, "type": "rent", "location": "Barcelona", "bedrooms": 3, "bathrooms": 1, "square_meters": 75, "floor": 1, "price": 600, "elevator": "No", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 20, "type": "sale", "location": "Barcelona", "bedrooms": 3, "bathrooms": 2, "square_meters": 90, "floor": 2, "price": 360000, "elevator": "No", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 21, "type": "sale", "location": "Barcelona", "bedrooms": 4, "bathrooms": 2, "square_meters": 120, "floor": 3, "price": 480000, "elevator": "Yes", "terrace": "Yes", "commercial_use": "Yes"},
+    {"id": 22, "type": "rent", "location": "Barcelona", "bedrooms": 4, "bathrooms": 2, "square_meters": 100, "floor": 0, "price": 3000, "elevator": "No", "terrace": "No", "commercial_use": "Yes"},
+    {"id": 23, "type": "sale", "location": "Barcelona", "bedrooms": 3, "bathrooms": 2, "square_meters": 95, "floor": 1, "price": 285000, "elevator": "Yes", "terrace": "No", "commercial_use": "No"},
+    {"id": 24, "type": "sale", "location": "Barcelona", "bedrooms": 1, "bathrooms": 1, "square_meters": 50, "floor": 2, "price": 200000, "elevator": "No", "terrace": "Yes", "commercial_use": "No"},
+    {"id": 25, "type": "sale", "location": "Barcelona", "bedrooms": 2, "bathrooms": 1, "square_meters": 60, "floor": 3, "price": 180000, "elevator": "No", "terrace": "No", "commercial_use": "Yes"},
+    {"id": 26, "type": "rent", "location": "Barcelona", "bedrooms": 2, "bathrooms": 1, "square_meters": 70, "floor": 5, "price": 950, "elevator": "Yes", "terrace": "Yes", "commercial_use": "No"}
+  ]
+}
