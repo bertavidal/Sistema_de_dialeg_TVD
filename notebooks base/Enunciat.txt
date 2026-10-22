@@ -1,0 +1,15 @@
+El objetivo de esta práctica es crear un sistema recomendador inmobiliario usando un sistema de diálogo. Debéis aplicar el método iterativo visto en clase para mejorar los sistemas de referencia.
+
+Tareas a entregar:
+
+1. Mejorad el sistema basado en reglas propuesto. Detectad los casos límites del sistema actual, proponed nuevos caminos y mejorad las fases de realización y microplanificación. Incluid el diagrama de flujo del nuevo sistema.
+
+2. Mejorad el sistema basado en LLM. Evaluad la calidad de las recomendaciones y proponed mejoras para reducir alucinaciones y comportamientos no deseados. 
+
+Instrucciones de entrega:
+
+* La práctica se realizará en parejas.
+
+* Debéis entregar un documento en PDF de máximo 10 páginas. El documento debe incluir Introducción, los dos sistemas propuestos explicados y conclusiones.
+
+* Podéis incluir código como apéndice o material suplementario. 
