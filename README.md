@@ -1,6 +1,6 @@
 # Sistema de diàleg TVD: assistent immobiliari
 
-Dos xatbots que ajuden un usuari a trobar un habitatge (compra o lloguer) a l'àrea de Barcelona. Un funciona amb regles i l'altre amb un LLM i *tools*. Pràctica P1 de l'assignatura Tecnologies de la Veu i el Diàleg (TVD).
+Dos xatbots que ajuden un usuari a trobar un habitatge (compra o lloguer) a l'àrea de Barcelona. Un funciona amb regles i l'altre amb un LLM i *tools*. Pràctica P1 de l'assignatura Tractament de la Veu i el Diàleg (TVD).
 
 ## Contingut
 
