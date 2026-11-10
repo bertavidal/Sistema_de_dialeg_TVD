@@ -59,8 +59,6 @@ pip install jupyter torch transformers accelerate
 
 ## Autores
 
-Berta i Irene
+Berta Vidal i Irene Miralles
 
-## Llicència
 
-Projecte acadèmic. Afegeix aquí la llicència que vulguis (per exemple MIT).
